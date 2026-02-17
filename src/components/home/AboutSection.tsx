@@ -59,7 +59,7 @@ export function AboutSection() {
                             ))}
                         </ul>
                         <div className="pt-4 flex justify-center lg:justify-start">
-                            <Link href="/about">
+                            <Link href="#">
                                 <Button variant="outline" className="border-primary/50 text-white hover:bg-primary hover:text-white gap-2 transition-all duration-300 rounded-full px-6">
                                     Learn More About Us <ArrowRight size={16} />
                                 </Button>

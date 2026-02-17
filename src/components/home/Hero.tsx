@@ -34,12 +34,12 @@ export function Hero() {
                         </p>
                     </div>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                        <Link href="/contact" className="w-full sm:w-auto">
+                        <Link href="#" className="w-full sm:w-auto">
                             <Button size="lg" className="w-full sm:w-auto animate-shimmer text-white font-bold rounded-full px-8 h-12 shadow-[0_0_20px_-5px_rgba(237,86,28,0.5)] hover:shadow-[0_0_30px_-5px_rgba(237,86,28,0.7)] transition-all duration-300 border-none">
                                 Start Your Project <ArrowRight className="ml-2 h-4 w-4" />
                             </Button>
                         </Link>
-                        <Link href="/portfolio" className="w-full sm:w-auto">
+                        <Link href="#" className="w-full sm:w-auto">
                             <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/20 text-white hover:bg-white/10 px-8 h-12 rounded-full backdrop-blur-sm">
                                 View Our Work
                             </Button>

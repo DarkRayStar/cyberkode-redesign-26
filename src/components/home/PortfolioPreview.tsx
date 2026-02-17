@@ -9,19 +9,22 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const projects = [
     {
-        title: "Project Alpha",
-        category: "Web Development",
-        image: "/images/portfolio_1.jpg",
+        title: "Campbelltown CCC",
+        category: "Childcare & Education",
+        image: "/images/campbelltown_ccc_final.png",
+        link: "https://www.campbelltownccc.com.au/",
     },
     {
-        title: "Beta App",
-        category: "Mobile Application",
-        image: "/images/portfolio_2.jpg",
+        title: "CyberSpectrum",
+        category: "Web App / Audio Visualizer",
+        image: "/images/cyberspectrum_final.png",
+        link: "https://cyberspectrum.club/",
     },
     {
-        title: "Gamma Design",
-        category: "UI/UX Design",
-        image: "/images/portfolio_3.jpg",
+        title: "Bzone Automotive",
+        category: "Automotive Services",
+        image: "/images/bzone_automotive_final.png",
+        link: "https://bzoneautomotive.com.au/",
     },
 ];
 
@@ -38,7 +41,7 @@ export function PortfolioPreview() {
                             Recent <span className="text-gradient">Projects</span>
                         </h2>
                     </div>
-                    <Link href="/portfolio" className="hidden md:block">
+                    <Link href="#" className="hidden md:block">
                         <Button variant="ghost" className="text-gray-400 hover:text-primary gap-2 hover:bg-white/5 rounded-full px-6">
                             View All Projects <ArrowRight size={16} />
                         </Button>
@@ -54,29 +57,40 @@ export function PortfolioPreview() {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
                         >
-                            <Card className="overflow-hidden border-white/10 shadow-lg group cursor-pointer bg-white/5 backdrop-blur-sm">
-                                <div className="relative aspect-[4/3] overflow-hidden">
-                                    <Image
-                                        src={project.image}
-                                        alt={project.title}
-                                        fill
-                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                    />
-                                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                        <Button variant="secondary" className="bg-primary text-white hover:bg-primary/90 border-none shadow-lg">View Details</Button>
+                            <Link href={project.link} target="_blank" rel="noopener noreferrer">
+                                <Card className="overflow-hidden border-white/10 shadow-lg group cursor-pointer bg-white/5 backdrop-blur-sm h-full flex flex-col">
+                                    <div className="relative aspect-[4/3] overflow-hidden flex-shrink-0">
+                                        <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            fill
+                                            className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:opacity-100 opacity-90"
+                                        />
+                                        {/* Dark overlay for blending - fades out on hover */}
+                                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-colors duration-500" />
+
+                                        {/* Bottom gradient to blend into card content */}
+                                        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#1a1a1a] to-transparent opacity-80" />
+
+                                        {/* Hover overlay with button */}
+                                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                                            <Button variant="secondary" className="bg-primary text-white hover:bg-primary/90 border-none shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                                Visit Site
+                                            </Button>
+                                        </div>
                                     </div>
-                                </div>
-                                <CardContent className="p-4 bg-white/5 border-t border-white/5">
-                                    <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors">{project.title}</h3>
-                                    <p className="text-sm text-gray-400">{project.category}</p>
-                                </CardContent>
-                            </Card>
+                                    <CardContent className="p-6 bg-white/5 border-t border-white/5 flex-grow relative z-20">
+                                        <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors mb-2">{project.title}</h3>
+                                        <p className="text-sm text-gray-400">{project.category}</p>
+                                    </CardContent>
+                                </Card>
+                            </Link>
                         </motion.div>
                     ))}
                 </div>
 
                 <div className="mt-8 text-center md:hidden">
-                    <Link href="/portfolio">
+                    <Link href="#">
                         <Button variant="default" className="w-full bg-primary hover:bg-primary/90">
                             View All Projects <ArrowRight size={16} className="ml-2" />
                         </Button>

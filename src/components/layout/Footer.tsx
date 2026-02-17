@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -12,21 +13,31 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                     {/* Brand Column */}
                     <div className="space-y-4">
-                        <h3 className="text-2xl font-bold text-primary">Cyberkode</h3>
+                        <div className="relative w-40 h-10 mb-4">
+                            <Image
+                                src="/images/logo_1.png"
+                                alt="Cyberkode"
+                                fill
+                                className="object-contain object-left"
+                            />
+                        </div>
                         <p className="text-gray-400 text-sm">
                             Empowering businesses with cutting-edge digital solutions. We transform ideas into reality.
                         </p>
                         <div className="flex space-x-4">
-                            <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
+                            <Link href="https://www.facebook.com/cyberkode" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
                                 <Facebook size={20} />
                             </Link>
-                            <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
-                                <Twitter size={20} />
+                            <Link href="https://x.com/cyber_kode" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
+                                {/* X Logo SVG */}
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                                </svg>
                             </Link>
-                            <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
+                            <Link href="https://www.instagram.com/cyberkode/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
                                 <Instagram size={20} />
                             </Link>
-                            <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
+                            <Link href="https://www.linkedin.com/company/cyberkode/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
                                 <Linkedin size={20} />
                             </Link>
                         </div>
@@ -82,8 +93,8 @@ export function Footer() {
                         &copy; {currentYear} Cyberkode. All rights reserved.
                     </p>
                     <div className="flex space-x-6 text-sm text-gray-500">
-                        <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-                        <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+                        <Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link>
+                        <Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>
