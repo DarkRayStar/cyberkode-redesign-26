@@ -30,7 +30,7 @@ export default function Home() {
       <SectionSeparator />
       <AboutSection />
       <SectionSeparator />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <SectionSeparator />
       <PortfolioPreview />
       <SectionSeparator />

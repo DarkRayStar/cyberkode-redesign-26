@@ -14,10 +14,10 @@ import {
 
 const navLinks = [
     { name: "Home", href: "/", icon: Home },
-    { name: "About", href: "/about", icon: User },
-    { name: "Services", href: "/services", icon: Zap },
-    { name: "Portfolio", href: "/portfolio", icon: Briefcase },
-    { name: "Contact", href: "/contact", icon: Mail },
+    { name: "About", href: "#", icon: User },
+    { name: "Services", href: "#", icon: Zap },
+    { name: "Portfolio", href: "#", icon: Briefcase },
+    { name: "Contact", href: "#", icon: Mail },
 ];
 
 export function Navbar() {

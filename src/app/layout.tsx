@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Cyberkode Team" }],
   creator: "Cyberkode",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon.png?v=5",
+    shortcut: "/favicon.png?v=5",
+    apple: "/favicon.png?v=5",
   },
   openGraph: {
     type: "website",

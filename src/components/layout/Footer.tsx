@@ -37,10 +37,10 @@ export function Footer() {
                         <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
                         <ul className="space-y-2 text-sm text-gray-400">
                             <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
-                            <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-                            <li><Link href="/services" className="hover:text-primary transition-colors">Services</Link></li>
-                            <li><Link href="/portfolio" className="hover:text-primary transition-colors">Portfolio</Link></li>
-                            <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">About Us</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">Services</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">Portfolio</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">Contact</Link></li>
                         </ul>
                     </div>
 
@@ -48,10 +48,10 @@ export function Footer() {
                     <div>
                         <h4 className="text-lg font-semibold mb-4">Our Services</h4>
                         <ul className="space-y-2 text-sm text-gray-400">
-                            <li><Link href="/services/web-development" className="hover:text-primary transition-colors">Web Development</Link></li>
-                            <li><Link href="/services/mobile-apps" className="hover:text-primary transition-colors">Mobile Apps</Link></li>
-                            <li><Link href="/services/ui-ux" className="hover:text-primary transition-colors">UI/UX Design</Link></li>
-                            <li><Link href="/services/seo" className="hover:text-primary transition-colors">SEO Optimization</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">Web Development</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">Mobile Apps</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">UI/UX Design</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">SEO Optimization</Link></li>
                         </ul>
                     </div>
 
